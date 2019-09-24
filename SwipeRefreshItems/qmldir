@@ -1,0 +1,5 @@
+module SwipeRefreshItems
+SwipeRefreshItem 1.0 SwipeRefreshItem.qml
+SwipeRefreshListView 1.0 SwipeRefreshListView.qml
+SwipeRefreshPage 1.0 SwipeRefreshPage.qml
+plugin SwipeRefreshItems
