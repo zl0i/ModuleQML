@@ -4,7 +4,7 @@ import QtQuick.Controls 2.5
 Flickable {
     id: _root
 
-    flickableDirection: Flickable.HorizontalAndVerticalFlick
+    flickableDirection: Flickable.VerticalFlick
     boundsMovement: Flickable.StopAtBounds
     boundsBehavior: Flickable.DragOverBounds
     height: parent.height
