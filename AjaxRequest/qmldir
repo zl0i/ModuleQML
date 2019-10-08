@@ -1,0 +1,2 @@
+module AjaxRequest
+singleton Ajax 1.0 Ajax.qml
