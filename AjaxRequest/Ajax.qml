@@ -33,7 +33,7 @@ QtObject {
         var fullUrl = url
         if(data !== "")
             fullUrl += '?' + data;
-        xhr.open("POST", fullUrl, true)
+        xhr.open("GET", fullUrl, true)
 
         xhr.onload = function() {
             console.log("Загружено!")
