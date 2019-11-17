@@ -9,7 +9,9 @@ Canvas {
     property color internalColor: "#000000"
     property bool running: false
     property real speed: 1
-    property real radius: Math.min(width, height)/2-3
+    property real externalRadius: Math.min(width, height)/2-3
+    property real internalRadius: externalRadius - 10
+    property real lineWidth: 3
 
     property real angle: 0
 
@@ -28,21 +30,21 @@ Canvas {
         ctx.reset()
         var centerX = width/2
         var centerY = height/2
-        ctx.lineWidth = 3
+        ctx.lineWidth = _canvas.lineWidth
 
         var angleK = angle*Math.PI/180
 
         ctx.strokeStyle = externalColor
         ctx.beginPath()
-        ctx.arc(centerX, centerY, radius, 0 + angleK, Math.PI + angleK);
+        ctx.arc(centerX, centerY, externalRadius, 0 + angleK, Math.PI + angleK);
         ctx.stroke()
 
-        ctx.translate(centerX,centerY )
+        ctx.translate(centerX,centerY)
         ctx.rotate(75*Math.PI/180)
 
         ctx.strokeStyle = internalColor
         ctx.beginPath()
-        ctx.arc(0, 0,  radius-10, 0 + angleK*2, Math.PI + angleK*2);
+        ctx.arc(0, 0,  internalRadius , 0 + angleK*2, Math.PI + angleK*2);
         ctx.stroke()
     }
 }
